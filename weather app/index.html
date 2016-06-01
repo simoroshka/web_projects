@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="WeatherApp">
+<head>
+	<title>Angular JS Weather Forecast SPA</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/styles/style.css">
+
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand">AngularJS Weather</a>
+			</div>	
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/home">Home</a></li>
+				<li><a href="#/forecast">Forecast</a></li>
+			</ul>
+		</div>		
+	</nav>	
+</header>
+
+<div class="container" ng-view></div>
+
+</body>
+
+	<!-- Vendors -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-resource.js"></script>
+	<!-- App -->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="assets/javascript/routes.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="assets/javascript/services/cityService.js"></script>
+	<!-- Controllers -->
+	<script type="text/javascript" src="assets/javascript/controllers/homeController.js"></script>
+	<script type="text/javascript" src="assets/javascript/controllers/forecastController.js"></script>
+
+</html>
