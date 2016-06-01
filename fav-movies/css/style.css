@@ -43,7 +43,6 @@ ul.users_menu, ul.admin_menu {
 
 ul.users_menu {
    width: 200px;
-   display: none;   
 }
 
 ul.admin_menu {
@@ -66,12 +65,27 @@ ul.users_menu li a:hover, .admin_menu li a:hover {
    color: white;
 }
 
-.admin_users {
+ul.users_menu li.logout {
+	border-top: 1px solid grey;
+	text-transform: uppercase;
+}
+
+ul.users_menu li.logout a {
+	background-color: white;
+	color: black;
+}
+
+ul.users_menu li.logout a:hover {
+	background-color: black;
+	color: white;
+}
+
+.admin_users, .admin_movies {
    margin-top: 40px;
    margin-left: 50px;
 }
 
-.admin_users h2 {
+.admin_users h2, .admin_movies h2 {
    font-size: 1.25em;
    margin-bottom: 20px;
 }
@@ -156,9 +170,10 @@ ul.favs li a:hover {
 }
 
 .movie_list, .movie_single {
-    margin-left: 225px;
-    width: 610px;
-    border: 1px dotted gray;
+   margin-top: 15px;
+   margin-left: 225px;
+   width: 610px;
+   border: 1px dotted gray;
 }
 
 .movie_list {
@@ -189,7 +204,7 @@ ul.favs li a:hover {
    font-size: 1.1em;
    color: #438BC5;
    font-weight: bold;
-   display: block;
+   display: inline-block;
    margin-top: 0.5em;
    margin-bottom: 0.5em;
    text-decoration: none;
@@ -307,7 +322,7 @@ ul.favs li a:hover {
 	height: 60px;
 }
 
-.trash:hover {
+.trash:hover, .trash_hover {
 	background-position: 0 -61px ;
 }
 
@@ -325,21 +340,25 @@ ul.favs li a:hover {
 	position: relative;
 }
 
-.movie_list li .add_remove {
+.non_favs .add {
 	position: absolute;
 	top: 10px;
 	right: 30px;
 }
 
-.admin_table .delete {
+.delete {
 	background-position: 0 -130px ;
 	margin-left: 40px;
 	width: 20px;
 	height: 20px;
 }
 
-.admin_table .delete:hover {
+.delete:hover {
 	background-position: -21px -130px;
+}
+
+.admin_table .description {
+   width: 700px;
 }
 
 .insert{
@@ -353,11 +372,24 @@ ul.favs li a:hover {
 	background-position: -21px -177px;
 }
 
+.success {
+   background-position: -42px -177px;
+}
+
 .admin_table .success {
-	background-position: -42px -177px;
 	margin-left: 40px;
 	width: 40px;
 	height: 20px;
+}
+
+.non_favs .success {
+	width: 20px;
+	height: 20px;
+}
+
+.favs .highlight {
+   background-color: orange;
+   border: 1px solid red;
 }
 
 footer {
@@ -384,4 +416,83 @@ footer a {
 
 footer a:hover {
    color: #A32824;
+}
+
+.alert {
+   color: red;
+}
+
+.message {
+   margin-top: 40px;
+   margin-left: 50px;
+}
+
+.message h2 {
+   font-size: 1.25em;
+   font-weight: bold;
+}
+
+.hidden {
+   display: none;
+}
+
+.no_border_bottom {
+   border-bottom: none;
+}
+
+.like_none:after {
+   content: "You haven't got any favourite movies yet! Mouse over the movies and click on the heart icon to add them to the list on the left.";
+}
+
+.like_some:after {
+   content: "Here are some movies you might like. Click on the heart icon to add them to your favourites list.";
+}
+
+.like_all:after {
+   content: "It looks like you love all the movies! Drag them to the trash can to delete them from your favourites.";
+}
+
+.loader_large {
+   background-image: url('../images/loader-large.png');
+   position: absolute;
+   left: 500px;
+   top: 430px;
+   height: 50px;
+   width: 50px;
+}
+
+.loader_small {
+   background-image: url('../images/loader-small.png');
+   margin-left: 40px;
+   width: 25px;
+   height: 25px; 
+}
+
+.dim {
+   opacity: 0.5;
+}
+
+.noscript {
+   margin: 20px auto 20px auto;
+   padding: 20px;
+   width: 50%;
+   overflow-y: auto;
+   text-align: center;
+   background-color: #FFEFBE;
+   -webkit-box-shadow: 7px 7px 5px rgba(50,50,50,0.75);
+   -moz-box-shadow: 7px 7px 5px rgba(50,50,50,0.75);
+   box-shadow: 7px 7px 5px rgba(50,50,50,0.75);
+}
+
+noscript h1 {
+   font-size: 1.3em;
+   margin-bottom: 1em;
+}
+
+noscript p {
+   font-size: 0.9em;
+}
+
+.content {
+   display: inline;
 }
