@@ -13,4 +13,8 @@ angular.module("WeatherApp")
     $scope.convertToCelcius = function(kelvin) {
         return Math.round(kelvin - 273,15);  
     };
+                                       
+    $scope.convertToDate = function(dt) {
+        return new Date(dt * 1000);  
+    };
 }]);
