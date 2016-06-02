@@ -1,7 +1,9 @@
 <h4>Forecast for {{city}}</h4>
-
+<hr />
+Days: <a href="#/forecast/2">2</a> | <a href="#/forecast/5">5</a>
+<hr />
 <div ng-repeat="w in weatherResult.list">
-    <div class="col-md-12">
+    <div class="col-md-12" ng-if="!($index%8)">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">{{w.dt_txt}}</h3>
