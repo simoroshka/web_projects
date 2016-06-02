@@ -7,14 +7,8 @@
 <a href="#/forecast/2" class="btn" ng-class="{ 'btn-primary': days === '2', 'btn-info': days !== '2'}">2 days</a>  <a href="#/forecast/3" class="btn" ng-class="{ 'btn-primary': days === '3', 'btn-info': days !== '3'}">3 days</a> <a href="#/forecast/5" class="btn" ng-class="{ 'btn-primary': days === '5', 'btn-info': days !== '5'}">5 days</a>
 <hr />
 <div ng-repeat="w in weatherResult.list">
-    <div class="col-md-12" ng-if="!($index%8)">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{convertToDate(w.dt) | date: 'MMM d, y'}}</h3>
-            </div>
-            <div class="panel-body">
-                Temperature: {{ convertToCelcius(w.main.temp) }}
-            </div>
-        </div>        
+    
+    <div class="col-md-12" ng-if="!($index%8)">       
+        <forecast-day day="w" convert-to-standard="convertToCelsius(temp)" convert-to-date="convertToDate(dt)" date-format="MMM d, y"></forecast-day>    
     </div>
 </div>
