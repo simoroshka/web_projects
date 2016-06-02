@@ -1,6 +1,10 @@
+<p>
+    <a href="#/">Back to Search</a>
+</p>
+
 <h4>Forecast for {{city}}</h4>
 <hr />
-Days: <a href="#/forecast/2">2</a> | <a href="#/forecast/5">5</a>
+<a href="#/forecast/2" class="btn" ng-class="{ 'btn-primary': days === '2', 'btn-info': days !== '2'}">2 days</a>  <a href="#/forecast/3" class="btn" ng-class="{ 'btn-primary': days === '3', 'btn-info': days !== '3'}">3 days</a> <a href="#/forecast/5" class="btn" ng-class="{ 'btn-primary': days === '5', 'btn-info': days !== '5'}">5 days</a>
 <hr />
 <div ng-repeat="w in weatherResult.list">
     <div class="col-md-12" ng-if="!($index%8)">
